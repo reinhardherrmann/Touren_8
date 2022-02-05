@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_touren"
+    app:startDestination="@id/tourenListFragment">
+
+    <fragment
+        android:id="@+id/tourenListFragment"
+        android:name="de.orome.touren8.view.touren.TourenListFragment"
+        android:label="TourenListFragment" >
+        <action
+            android:id="@+id/action_tourenListFragment_to_tourNewFragment"
+            app:destination="@id/tourNewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tourNewFragment"
+        android:name="de.orome.touren8.view.touren.TourNewFragment"
+        android:label="TourNewFragment" />
+</navigation>

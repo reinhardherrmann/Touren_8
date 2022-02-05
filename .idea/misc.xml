@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_add_tour_white.xml" value="0.1975" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_test.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_touren.xml" value="0.24270833333333333" />
@@ -10,7 +11,7 @@
         <entry key="app/src/main/res/layout/fragment_main.xml" value="0.2351851851851852" />
         <entry key="app/src/main/res/layout/fragment_tour_details.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_tour_new.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_touren_list.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_touren_list.xml" value="0.4328205128205128" />
       </map>
     </option>
   </component>
