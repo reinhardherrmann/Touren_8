@@ -15,5 +15,9 @@
     <fragment
         android:id="@+id/tourNewFragment"
         android:name="de.orome.touren8.view.touren.TourNewFragment"
-        android:label="TourNewFragment" />
+        android:label="TourNewFragment" >
+        <action
+            android:id="@+id/action_tourNewFragment_to_tourenListFragment"
+            app:destination="@id/tourenListFragment" />
+    </fragment>
 </navigation>

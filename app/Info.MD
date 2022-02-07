@@ -39,6 +39,12 @@
 --------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------
+Version 0.2
+    Datenbank, Entity, TourDao und Repository erstellt
+    NewTourFragment alle eingabefelder erstellt und ggf. erf. ClickListener
+    eingeführt, jedoch noch ohne Wirkung
+    Klassen Helper und Event eingeführt
+    Helper erstellt UUID zum Speichern der Daten
 --------------------------------------------------------------------------------------
 Version 0.1
     Fragment und Navigationgraph für Touren eingefügt

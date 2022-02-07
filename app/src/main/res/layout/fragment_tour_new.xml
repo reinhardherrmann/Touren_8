@@ -9,17 +9,184 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_8sdp">
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:id="@+id/lbl_fragment_new_tour"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/_20ssp"
+            android:layout_marginTop="@dimen/_16sdp"
             android:text="neue Tour anlegen"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="@dimen/_20ssp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/divider_new_tour"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_fragment_new_tour" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_new_tour_tour_nummer"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider_new_tour"
+            app:startIconDrawable="@drawable/ic_baseline_pin_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_new_tour_tour_nummer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tournummer eingeben"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_new_tour_tour_datum"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_new_tour_tour_nummer"
+            app:startIconDrawable="@drawable/ic_calendar_month">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_new_tour_tour_datum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tourdatum tt.mm.JJJJ eingeben"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_new_tour_tour_dauer"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_new_tour_tour_datum"
+            app:startIconDrawable="@drawable/ic_time">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_new_tour_tour_dauer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Cos-Zeit hh:mm  eingeben"
+                android:inputType="time" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_new_tour_tour_depotzeit_vt"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_new_tour_tour_dauer"
+            app:startIconDrawable="@drawable/ic_time">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_new_tour_tour_depotzeit_vt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Depotzeit vor Tour hh:mm  eingeben"
+                android:inputType="time" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_new_tour_tour_depotzeit_nt"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_new_tour_tour_depotzeit_vt"
+            app:startIconDrawable="@drawable/ic_time">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_new_tour_tour_depotzeit_nt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Depotzeit nach Tour hh:mm  eingeben"
+                android:inputType="time" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_new_tour_tour_fahrer_nummer"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_new_tour_tour_depotzeit_nt"
+            app:startIconDrawable="@drawable/ic_person">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_new_tour_tour_fahrer_nummer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Fahrernummer 4-stellig eingeben"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_new_tour_tour_fahrzeug_nummer"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_new_tour_tour_fahrer_nummer"
+            app:startIconDrawable="@drawable/ic_truck_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_new_tour_tour_fahrzeug_nummer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Fahrzeugnummer 4-stellig  eingeben"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_new_tour_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textColor="@color/white"
+            android:text="Speichern"
+            app:layout_constraintEnd_toEndOf="@+id/til_new_tour_tour_fahrzeug_nummer"
+            app:layout_constraintTop_toBottomOf="@+id/til_new_tour_tour_fahrzeug_nummer" />
+
+        <Button
+            android:id="@+id/btn_new_tour_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_marginEnd="16dp"
+            android:text="Abbrechen"
+            app:layout_constraintEnd_toStartOf="@+id/btn_new_tour_save"
+            app:layout_constraintTop_toTopOf="@+id/btn_new_tour_save" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
