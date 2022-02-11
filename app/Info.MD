@@ -38,6 +38,10 @@
 --------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------
+Version 0.3
+    Dialoge zur Eingabe der DAtums- und Zeitwerte im Fragment TourNewFragment
+    ViewModel mit Variablen zum Auslesen der Tourdaten
+
 --------------------------------------------------------------------------------------
 Version 0.2
     Datenbank, Entity, TourDao und Repository erstellt
